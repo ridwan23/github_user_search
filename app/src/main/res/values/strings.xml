@@ -1,0 +1,8 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="ExtraTranslation">
+    <string name="app_name">GithubTest</string>
+
+    <string name="main_lbl_user_name">User Name…</string>
+    <string name="main_lbl_search_result">Search Result:</string>
+    <string name="main_lbl_search_by_username">Search by username..</string>
+
+</resources>
