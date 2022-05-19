@@ -23,3 +23,11 @@ jobs:
         run: |
           APK_NAME=$(echo app/build/outputs/apk/prod/release/*.apk)
           echo "::set-output name=APK_NAME::${APK_NAME}"
+      - name: Upload artifact to Firebase App Distribution
+        uses: wzieba/Firebase-Distribution-Github-Action@v1.3.2
+        with:
+          appId: ${{secrets.FIREBASE_APP_ID_PRODUCTION}}
+          token: ${{secrets.FIREBASE_TOKEN}}
+          groups: tester
+          file: ${{ steps.apk-name.outputs.APK_NAME }}
+          debug: true
